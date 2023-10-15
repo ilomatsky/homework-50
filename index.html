@@ -9,24 +9,67 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            max-width: 550px;
+            margin: 50px auto 0;
+            font-weight: 800;
+        }
+
         #app > div {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            margin-top: 80px;
             flex-wrap: wrap;
         }
+
+        .card {
+            width: 340px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            cursor: crosshair;
+        }
+
+        .card img {
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        .card h2 {
+            padding: 20px;
+        }
+
     </style>
 </head>
 <body>
+<header>
+    <h1>Лучшие фильмы человечества:</h1>
+</header>
 <div id="app"></div>
 
 <script type="text/babel">
     const CardFilm = (props) => {
         return (
-            <div className="person">
+            <div className="card">
                 <img src={props.src}  alt={props.name + props.year}/>
-                <h1>{`${props.name} (${props.year})`}</h1>
+                <h2>{`${props.name} (${props.year})`}</h2>
             </div>
         )
     };
