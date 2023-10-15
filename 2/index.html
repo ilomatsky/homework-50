@@ -15,63 +15,99 @@
 </head>
 <body>
 
-<header class="header">
-    <div class="container">
-        <a href="#" class="logo">
-            <img src="images/logo.png" alt="Youmi">
-        </a>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Тарифы</a></li>
-                <li><a href="#">Психологам</a></li>
-                <li><a href="#">Материалы</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div class="main-block">
-    <div class="container main-container">
-        <div class="main-info">
-            <h1 class="main-title">В YouMi вы не одни, вместе мы справимся</h1>
-            <p>Психология личности прямо касается проблем, волнующих каждого человека. С нами Вы сможете найти ответы на
-                непростые и крайне важные вопросы.</p>
-            <a href="#" class="main-link">Личный кабинет</a>
-        </div>
-    </div>
-</div>
-
-<div class="values">
-    <div class="container">
-        <h2 class="values-header">Наши ценности</h2>
-        <div class="card card-pic-1">
-            <h4 class="card-name">Вместе мы справимся</h4>
-            <p>Мы всегда рядом. Свяжитесь с психологом в любое время и получите необходимую помощь.</p>
-        </div>
-        <div class="card card-pic-2">
-            <h4 class="card-name">Забота на расстоянии</h4>
-            <p>Мы позаботились о том, чтобы вы чувствовали нашу поддержу постоянно. Для этого мы создали приложение с виртуальным психологом.</p>
-        </div>
-        <div class="card card-pic-3">
-            <h4 class="card-name">Думаем о важном</h4>
-            <p>Займитесь главным, а напоминание о предстоящих сессия мы взяли на себя.</p>
-        </div>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="container d-flex">
-        <p class="cooperation">Сотрудничество <span>@youmiwork</span></p>
-        <ul class="footer-navigation">
-            <li><a href="#">Пользовательское соглашение</a></li>
-            <li><a href="#">Юридические документы</a></li>
-            <li><a href="#">Обработка персональных данных</a></li>
-        </ul>
-    </div>
-</footer>
+<div id="app"></div>
 
 <script type="text/babel">
+
+    const Header = () => (
+        <header className="header">
+            <div className="container">
+                <a href="#" className="logo">
+                    <img src="images/logo.png" alt="Youmi"/>
+                </a>
+                <nav className="navigation">
+                    <HeaderLinks/>
+                </nav>
+            </div>
+        </header>
+    );
+
+    const HeaderLinks = () => (
+        <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Тарифы</a></li>
+            <li><a href="#">Психологам</a></li>
+            <li><a href="#">Материалы</a></li>
+        </ul>
+    );
+
+    const MainBlock = () => (
+        <div className="main-block">
+            <div className="container main-container">
+                <div className="main-info">
+                    <h1 className="main-title">В YouMi вы не одни, вместе мы справимся</h1>
+                    <p>Психология личности прямо касается проблем, волнующих каждого человека. С нами Вы сможете найти
+                        ответы на непростые и крайне важные вопросы.</p>
+                    <a href="#" className="main-link">Личный кабинет</a>
+                </div>
+            </div>
+        </div>
+    );
+
+    const Values = () => (
+        <div className="values">
+            <div className="container">
+                <h2 className="values-header">Наши ценности</h2>
+                <ValuesCard/>
+            </div>
+        </div>
+    );
+
+    const ValuesCard = () => (
+        <div>
+            <div className="card card-pic-1">
+                <h4 className="card-name">Вместе мы справимся</h4>
+                <p>Мы всегда рядом. Свяжитесь с психологом в любое время и получите необходимую помощь.</p>
+            </div>
+            <div className="card card-pic-2">
+                <h4 className="card-name">Забота на расстоянии</h4>
+                <p>Мы позаботились о том, чтобы вы чувствовали нашу поддержу постоянно. Для этого мы создали
+                    приложение с виртуальным психологом.</p>
+            </div>
+            <div className="card card-pic-3">
+                <h4 className="card-name">Думаем о важном</h4>
+                <p>Займитесь главным, а напоминание о предстоящих сессия мы взяли на себя.</p>
+            </div>
+        </div>
+    );
+
+    const Footer = () => (
+        <footer className="footer">
+            <div className="container">
+                <p className="cooperation">Сотрудничество <span>@youmiwork</span></p>
+                <div className="footer-navigation">
+                    <ul>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="#">Юридические документы</a></li>
+                        <li><a href="#">Обработка персональных данных</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    );
+
+    const App = () => (
+        <div>
+            <div className="content">
+                <Header/>
+                <MainBlock/>
+                <Values/>
+                <Footer/>
+            </div>
+        </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
 
 </script>
 

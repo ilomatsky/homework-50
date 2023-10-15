@@ -11,11 +11,6 @@ body {
     padding: 0 15px;
 }
 
-.d-flex {
-    display: flex;
-    flex-direction: row;
-}
-
 .header {
     padding: 15px 0 22px 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.25);
@@ -127,10 +122,15 @@ body {
 }
 
 .footer {
+    margin-top: 100px;
     background-color: #EBF5FF;
-    padding: 50px 0 22px 180px;
+    padding: 20px 0 40px 0;
     border-top: 2px solid rgba(0, 0, 0, 0.25);
-    text-align: left;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .footer-navigation li {
@@ -141,11 +141,15 @@ body {
 .footer-navigation a {
     font-size: 14px;
     color: #4D4D52;
-    margin-left: 70px;
+    margin-left: 20px;
 }
 
 .footer-navigation a:hover {
     text-decoration: none;
+}
+
+.cooperation {
+    text-align: center;
 }
 
 .cooperation span {
