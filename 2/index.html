@@ -19,82 +19,94 @@
 
 <script type="text/babel">
 
-    const Header = () => (
-        <header className="header">
-            <div className="container">
-                <a href="#" className="logo">
-                    <img src="images/logo.png" alt="Youmi"/>
-                </a>
-                <nav className="navigation">
-                    <HeaderLinks/>
-                </nav>
-            </div>
-        </header>
-    );
+    const Header = () => {
+        return (
+            <header className="header">
+                <div className="container">
+                    <a href="#" className="logo">
+                        <img src="images/logo.png" alt="Youmi"/>
+                    </a>
+                    <nav className="navigation">
+                        <HeaderLinks/>
+                    </nav>
+                </div>
+            </header>
+        );
+    }
 
-    const HeaderLinks = () => (
-        <ul>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Тарифы</a></li>
-            <li><a href="#">Психологам</a></li>
-            <li><a href="#">Материалы</a></li>
-        </ul>
-    );
+    const HeaderLinks = () => {
+        return (
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Тарифы</a></li>
+                <li><a href="#">Психологам</a></li>
+                <li><a href="#">Материалы</a></li>
+            </ul>
+        );
+    }
 
-    const MainBlock = () => (
-        <div className="main-block">
-            <div className="container main-container">
-                <div className="main-info">
-                    <h1 className="main-title">В YouMi вы не одни, вместе мы справимся</h1>
-                    <p>Психология личности прямо касается проблем, волнующих каждого человека. С нами Вы сможете найти
-                        ответы на непростые и крайне важные вопросы.</p>
-                    <a href="#" className="main-link">Личный кабинет</a>
+    const MainBlock = () => {
+        return (
+            <div className="main-block">
+                <div className="container main-container">
+                    <div className="main-info">
+                        <h1 className="main-title">В YouMi вы не одни, вместе мы справимся</h1>
+                        <p>Психология личности прямо касается проблем, волнующих каждого человека. С нами Вы сможете найти
+                            ответы на непростые и крайне важные вопросы.</p>
+                        <a href="#" className="main-link">Личный кабинет</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 
-    const Values = () => (
-        <div className="values">
-            <div className="container">
-                <h2 className="values-header">Наши ценности</h2>
-                <ValuesCard/>
-            </div>
-        </div>
-    );
-
-    const ValuesCard = () => (
-        <div>
-            <div className="card card-pic-1">
-                <h4 className="card-name">Вместе мы справимся</h4>
-                <p>Мы всегда рядом. Свяжитесь с психологом в любое время и получите необходимую помощь.</p>
-            </div>
-            <div className="card card-pic-2">
-                <h4 className="card-name">Забота на расстоянии</h4>
-                <p>Мы позаботились о том, чтобы вы чувствовали нашу поддержу постоянно. Для этого мы создали
-                    приложение с виртуальным психологом.</p>
-            </div>
-            <div className="card card-pic-3">
-                <h4 className="card-name">Думаем о важном</h4>
-                <p>Займитесь главным, а напоминание о предстоящих сессия мы взяли на себя.</p>
-            </div>
-        </div>
-    );
-
-    const Footer = () => (
-        <footer className="footer">
-            <div className="container">
-                <p className="cooperation">Сотрудничество <span>@youmiwork</span></p>
-                <div className="footer-navigation">
-                    <ul>
-                        <li><a href="#">Пользовательское соглашение</a></li>
-                        <li><a href="#">Юридические документы</a></li>
-                        <li><a href="#">Обработка персональных данных</a></li>
-                    </ul>
+    const Values = () => {
+        return (
+            <div className="values">
+                <div className="container">
+                    <h2 className="values-header">Наши ценности</h2>
+                    <ValuesCard/>
                 </div>
             </div>
-        </footer>
-    );
+        );
+    }
+
+    const ValuesCard = () => {
+        return (
+            <div>
+                <div className="card card-pic-1">
+                    <h4 className="card-name">Вместе мы справимся</h4>
+                    <p>Мы всегда рядом. Свяжитесь с психологом в любое время и получите необходимую помощь.</p>
+                </div>
+                <div className="card card-pic-2">
+                    <h4 className="card-name">Забота на расстоянии</h4>
+                    <p>Мы позаботились о том, чтобы вы чувствовали нашу поддержу постоянно. Для этого мы создали
+                        приложение с виртуальным психологом.</p>
+                </div>
+                <div className="card card-pic-3">
+                    <h4 className="card-name">Думаем о важном</h4>
+                    <p>Займитесь главным, а напоминание о предстоящих сессия мы взяли на себя.</p>
+                </div>
+            </div>
+        );
+    }
+
+    const Footer = () => {
+        return (
+            <footer className="footer">
+                <div className="container">
+                    <p className="cooperation">Сотрудничество <span>@youmiwork</span></p>
+                    <div className="footer-navigation">
+                        <ul>
+                            <li><a href="#">Пользовательское соглашение</a></li>
+                            <li><a href="#">Юридические документы</a></li>
+                            <li><a href="#">Обработка персональных данных</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        );
+    }
 
     const App = () => (
         <div>
